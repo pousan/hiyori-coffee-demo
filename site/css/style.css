@@ -7,19 +7,19 @@
 
 :root {
   /* Color Tokens */
-  --bg-base: #F5EAD3;
-  --bg-surface: #FBF2DE;
-  --text-main: #3B2C1E;
-  --text-sub: #6E5843;
-  --color-green: #1E4033;
-  --color-green-tint: #E6DFC6;
-  --color-brown: #7C4A22;
-  --color-brown-tint: #F0E2C4;
-  --color-border: #C9B28A;
+  --bg-base: #FAF7F2;
+  --bg-surface: #FDFCFA;
+  --text-main: #1C1917;
+  --text-sub: #5C554E;
+  --color-green: #1C1917;
+  --color-green-tint: #EFEBE3;
+  --color-brown: #44403C;
+  --color-brown-tint: #F1EDE6;
+  --color-border: #D8D2C8;
   --color-closed: #8B3F35;
-  --color-closed-tint: #F5E0CE;
-  --color-focus: #92400E;
-  --color-accent: #92400E;
+  --color-closed-tint: #F3E9E4;
+  --color-focus: #1C1917;
+  --color-accent: #A16207;
 
   /* Typography */
   --font-sans: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
@@ -37,14 +37,14 @@
   --space-80: 80px;
 
   /* Radius */
-  --radius-card: 12px;
-  --radius-btn: 8px;
-  --radius-label: 4px;
+  --radius-card: 3px;
+  --radius-btn: 2px;
+  --radius-label: 1px;
 
   /* Elevation (Shadows) */
-  --shadow-card: 0 8px 24px rgba(59, 44, 30, 0.08), 0 2px 6px rgba(59, 44, 30, 0.04);
-  --shadow-card-strong: 0 12px 28px rgba(30, 48, 38, 0.24), 0 4px 10px rgba(30, 48, 38, 0.12);
-  --shadow-subtle: 0 4px 12px rgba(59, 44, 30, 0.06);
+  --shadow-card: 0 8px 24px rgba(28, 25, 23, 0.05), 0 2px 6px rgba(28, 25, 23, 0.03);
+  --shadow-card-strong: 0 12px 28px rgba(28, 25, 23, 0.16), 0 4px 10px rgba(28, 25, 23, 0.08);
+  --shadow-subtle: 0 4px 12px rgba(28, 25, 23, 0.04);
 
   /* Layout */
   --container-max: 1120px;
@@ -546,8 +546,8 @@ p:last-child {
 }
 
 .btn-primary:hover {
-  background-color: #133026;
-  border-color: #133026;
+  background-color: #0C0A09;
+  border-color: #0C0A09;
   color: var(--bg-surface);
 }
 
@@ -591,7 +591,7 @@ p:last-child {
 .photo-frame {
   position: relative;
   width: 100%;
-  background-color: #EADBB8;
+  background-color: #EFEBE3;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
@@ -642,7 +642,7 @@ p:last-child {
 .photo-card-media {
   position: relative;
   width: 100%;
-  background-color: #EADBB8;
+  background-color: #EFEBE3;
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -1009,7 +1009,7 @@ p:last-child {
 .menu-featured-media {
   position: relative;
   width: 100%;
-  background-color: #EADBB8;
+  background-color: #EFEBE3;
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -1605,5 +1605,58 @@ body::after {
   .menu-featured-card:hover,
   .card:hover {
     transform: none;
+  }
+}
+
+/* --- run 5: luxury direction (UI/UX Pro Max Luxury/Premium palette) --- */
+
+/* Remove film grain + light leak: polished, not nostalgic-film */
+body::after {
+  content: none;
+}
+.hero-media::after {
+  content: none;
+}
+
+/* Gallery mat frame instead of polaroid */
+.photo-frame {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--color-border);
+  padding: 12px;
+}
+.photo-frame img {
+  border: 1px solid rgba(161, 98, 7, 0.4);
+  border-radius: 0;
+}
+
+/* Refined type: wider-tracked gold labels, letterspaced serif headings */
+.section-label {
+  letter-spacing: 0.24em;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+.section-green-band .section-label {
+  color: #C9A35C;
+}
+h1, h2, h3 {
+  letter-spacing: 0.05em;
+}
+
+/* More air: larger section rhythm */
+.section {
+  padding-top: var(--space-64);
+  padding-bottom: var(--space-64);
+}
+@media (min-width: 768px) {
+  .section {
+    padding-top: calc(var(--space-80) * 1.25);
+    padding-bottom: calc(var(--space-80) * 1.25);
+  }
+}
+
+/* Slower, softer reveal for a premium feel */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    transition: opacity 0.9s ease, transform 0.9s ease;
   }
 }
