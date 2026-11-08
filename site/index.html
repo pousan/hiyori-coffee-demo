@@ -40,6 +40,7 @@
     <section class="section">
       <div class="container hero-grid">
         <div class="hero-content prose">
+          <p class="section-label">HIYORI COFFEE</p>
           <p class="note-text">ひより珈琲</p>
           <h1>いつもの道に、珈琲のひと休み。</h1>
           <p>
@@ -56,22 +57,22 @@
           </div>
         </div>
 
-        <div class="illus-frame illus-ratio-4-3" aria-hidden="true">
-          <div class="illus-window-scene">
-            <div class="illus-window"></div>
-            <div class="illus-leaf"></div>
-            <div class="illus-saucer"></div>
-            <div class="illus-cup"></div>
-            <div class="illus-table"></div>
-          </div>
-          <span class="illus-caption">イメージイラスト</span>
-        </div>
+        <figure class="photo-frame hero-media">
+          <img
+            src="images/hero-interior.jpg"
+            alt="朝の光が差し込む窓際の木のカウンターと珈琲（イメージ写真）"
+            width="1600"
+            height="1067"
+          >
+          <figcaption class="photo-caption">イメージ写真</figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- ② 今週の営業日 -->
-    <section class="section">
+    <!-- ② 今週の営業日（深緑の帯背景＋白い浮きカード） -->
+    <section class="section section-green-band">
       <div class="container">
+        <p class="section-label">WEEKLY SCHEDULE</p>
         <h2>今週の営業日</h2>
         <div class="hours-meta prose">
           <p data-hours-period>表示例：2026年11月9日〜15日</p>
@@ -95,19 +96,58 @@
     <!-- ③ 店の楽しみ -->
     <section class="section">
       <div class="container">
+        <p class="section-label">OUR MOMENTS</p>
         <h2>ひよりの時間</h2>
         <div class="cards-grid-3">
-          <article class="card">
-            <h3>朝のトースト</h3>
-            <p>9時から11時は、厚切りトーストと珈琲のセットをどうぞ。</p>
+          <article class="photo-card">
+            <div class="photo-card-media">
+              <img
+                src="images/toast-set.jpg"
+                alt="厚切りバタートーストとゆで卵、ブレンド珈琲のセット（イメージ写真）"
+                width="1600"
+                height="1067"
+                loading="lazy"
+              >
+              <span class="photo-caption">イメージ写真</span>
+            </div>
+            <div class="photo-card-body">
+              <h3>朝のトースト</h3>
+              <p>9時から11時は、厚切りトーストと珈琲のセットをどうぞ。</p>
+            </div>
           </article>
-          <article class="card">
-            <h3>少しずつ焙煎</h3>
-            <p>店内の小さな焙煎機で、豆の様子を見ながら焼いています。</p>
+
+          <article class="photo-card">
+            <div class="photo-card-media">
+              <img
+                src="images/roasting.jpg"
+                alt="小さな焙煎機と珈琲豆を確かめる手元（イメージ写真）"
+                width="1600"
+                height="1067"
+                loading="lazy"
+              >
+              <span class="photo-caption">イメージ写真</span>
+            </div>
+            <div class="photo-card-body">
+              <h3>少しずつ焙煎</h3>
+              <p>店内の小さな焙煎機で、豆の様子を見ながら焼いています。</p>
+            </div>
           </article>
-          <article class="card">
-            <h3>窓口から、お持ち帰り</h3>
-            <p>散歩の途中にも。珈琲と焼き菓子をお持ち帰りいただけます。</p>
+
+          <article class="photo-card">
+            <div class="photo-card-media">
+              <img
+                src="images/takeout.jpg"
+                alt="木の窓口から手渡すテイクアウト用の珈琲カップ（イメージ写真）"
+                width="1600"
+                height="1067"
+                loading="lazy"
+              >
+              <span class="photo-caption">イメージ写真</span>
+            </div>
+            <div class="photo-card-body">
+              <h3>窓口から、お持ち帰り</h3>
+              <p>散歩の途中にも。珈琲と焼き菓子をお持ち帰りいただけます。</p>
+            </div>
           </article>
         </div>
       </div>
@@ -115,15 +155,29 @@
 
     <!-- ④ アクセスの要約 -->
     <section class="section">
-      <div class="container prose">
-        <h2>商店街の先、緑の扉が目印です。</h2>
-        <p>
-          ひより駅から歩いて8分。商店街を抜けた住宅街にあります。<br>
-          <span class="note-text">駅・住所・道順は架空の設定です。</span>
-        </p>
-        <div class="section-link-wrap">
-          <a href="access.html#access" class="btn btn-secondary">住所と道順を見る</a>
+      <div class="container two-col-section">
+        <div class="prose">
+          <p class="section-label">LOCATION &amp; ACCESS</p>
+          <h2>商店街の先、緑の扉が目印です。</h2>
+          <p>
+            ひより駅から歩いて8分。商店街を抜けた住宅街にあります。<br>
+            <span class="note-text">駅・住所・道順は架空の設定です。</span>
+          </p>
+          <div class="section-link-wrap">
+            <a href="access.html#access" class="btn btn-secondary">住所と道順を見る</a>
+          </div>
         </div>
+
+        <figure class="photo-frame">
+          <img
+            src="images/storefront.jpg"
+            alt="住宅街にある緑の扉が目印の小さなカフェの外観（イメージ写真）"
+            width="1600"
+            height="1067"
+            loading="lazy"
+          >
+          <figcaption class="photo-caption">イメージ写真</figcaption>
+        </figure>
       </div>
     </section>
   </main>
