@@ -7,17 +7,17 @@
 
 :root {
   /* Color Tokens */
-  --bg-base: #FAF6EF;
-  --bg-surface: #FFFDF8;
-  --text-main: #302D28;
-  --text-sub: #625B52;
-  --color-green: #24483E;
-  --color-green-tint: #E9F0ED;
-  --color-brown: #795039;
-  --color-brown-tint: #F3ECE6;
-  --color-border: #D8CFC2;
+  --bg-base: #F5EAD3;
+  --bg-surface: #FBF2DE;
+  --text-main: #3B2C1E;
+  --text-sub: #6E5843;
+  --color-green: #1E4033;
+  --color-green-tint: #E6DFC6;
+  --color-brown: #7C4A22;
+  --color-brown-tint: #F0E2C4;
+  --color-border: #C9B28A;
   --color-closed: #8B3F35;
-  --color-closed-tint: #F9ECEA;
+  --color-closed-tint: #F5E0CE;
   --color-focus: #245FA5;
 
   /* Typography */
@@ -41,9 +41,9 @@
   --radius-label: 4px;
 
   /* Elevation (Shadows) */
-  --shadow-card: 0 8px 24px rgba(48, 45, 40, 0.08), 0 2px 6px rgba(48, 45, 40, 0.04);
-  --shadow-card-strong: 0 12px 28px rgba(18, 36, 31, 0.24), 0 4px 10px rgba(18, 36, 31, 0.12);
-  --shadow-subtle: 0 4px 12px rgba(48, 45, 40, 0.06);
+  --shadow-card: 0 8px 24px rgba(59, 44, 30, 0.08), 0 2px 6px rgba(59, 44, 30, 0.04);
+  --shadow-card-strong: 0 12px 28px rgba(30, 48, 38, 0.24), 0 4px 10px rgba(30, 48, 38, 0.12);
+  --shadow-subtle: 0 4px 12px rgba(59, 44, 30, 0.06);
 
   /* Layout */
   --container-max: 1120px;
@@ -545,8 +545,8 @@ p:last-child {
 }
 
 .btn-primary:hover {
-  background-color: #1A362E;
-  border-color: #1A362E;
+  background-color: #133026;
+  border-color: #133026;
   color: var(--bg-surface);
 }
 
@@ -590,7 +590,7 @@ p:last-child {
 .photo-frame {
   position: relative;
   width: 100%;
-  background-color: #EAE0D0;
+  background-color: #EADBB8;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
@@ -641,7 +641,7 @@ p:last-child {
 .photo-card-media {
   position: relative;
   width: 100%;
-  background-color: #EAE0D0;
+  background-color: #EADBB8;
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -1008,7 +1008,7 @@ p:last-child {
 .menu-featured-media {
   position: relative;
   width: 100%;
-  background-color: #EAE0D0;
+  background-color: #EADBB8;
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -1523,4 +1523,14 @@ p:last-child {
   .mobile-bottom-bar {
     display: none !important;
   }
+}
+
+/* --- run 3: Showa film grain overlay --- */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.05'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
