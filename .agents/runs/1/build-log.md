@@ -53,3 +53,40 @@
 ## 未確認のこと
 
 - 実行環境にGUIブラウザ（Chromium / Firefox / Safari等）およびPlaywright等のヘッドレスブラウザがインストールされていないため、実ブラウザのレンダリングエンジン上での目視確認（320px / 375px / 768px / 1024px / 1440px の実ピクセル描画やスクロール挙動）および実スクリーンリーダー（VoiceOver / NVDA等）による音声読み上げ確認は未実施。
+
+---
+
+## 修正記録（check-log 指摘 1, 2, 3, 5 への対応）
+
+### やったこと
+
+1. **今回の変更点と理由（文字サイズ・見出しサイズ・余白スケールの是正）**
+   - **メニュー説明文の文字サイズ変更（指摘1）**：`site/css/style.css` の `.menu-item-desc` を `0.9375rem`（15px）から設計規定の本文最小サイズである `1rem`（16px）へ変更した。
+   - **注記・ラベル・カレンダー・下部バー等の文字サイズ変更（指摘1）**：設計規定「注記14px以上」に反していた 12px（`0.75rem`）・13px（`0.8125rem`）の指定をすべて `0.875rem`（14px）へ統一した。
+     - 対象セレクタ：`.illus-caption`、`.illus-landmark-label`、`.week-calendar-table th`、`.cal-date`（モバイル時）、`.cal-status`（モバイル時・768px以上とも）、`.cal-hours`、`.tag-required`、`.tag-optional`、`.qr-placeholder-box`、`.mobile-bottom-link`、`.mobile-bottom-icon`。
+   - **320px幅での7列カレンダー・イラスト枠の収まり調整（指摘1・3）**：
+     - 7列週間カレンダー（`.week-calendar-table`）を14px文字にしても320px幅（コンテナ内幅280px＝1列あたり約39px）で欠け・はみ出しが起きないよう、モバイル時のセル余白を `padding: var(--space-8) 0;`（上下8px・左右0）、`.cal-status` を `padding: var(--space-4);`（4px、2文字28px＋左右8px＝36px≦39px）、`.cal-date` に `white-space: nowrap; letter-spacing: -0.02em;` を設定し、7列テーブルと詳細一覧の双方を維持した。
+     - 道順イラスト（`.illus-landmarks-grid`）のラベル14px化に伴い、320px幅で3列カードと右下の `.illus-caption` が重ならないよう、モバイル時のグリッド余白を `gap: var(--space-8); padding: var(--space-16) var(--space-8) var(--space-48);`、カード内余白を `padding: var(--space-12) var(--space-4);` に調整した。また `.qr-placeholder-box` の寸法を `88px` から `96px` 四方へ広げ、14px文字が余裕をもって収まるようにした。
+   - **375px未満の `h1` サイズ変更（指摘2）**：`site/css/style.css` の `h1` ベース指定を `1.75rem`（28px）から設計指定のスマホサイズ `2rem`（32px）へ変更し、不要となった `@media (min-width: 375px)` の分岐を削除した。
+   - **余白単位外の値の整理（指摘3）**：設計の余白スケール（`4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80px`、および設計明示のコンテナ横余白 `20px`）から外れていた `1px` / `2px` / `3px` / `6px` の指定をすべて設計スケール内の値へ統一した（例外残置なし）。
+     - `.badge`：`<padding: 2px var(--space-8)>` → `padding: var(--space-4) var(--space-8)`（4px 8px）
+     - `.illus-caption`：`<padding: 2px var(--space-8)>` → `padding: var(--space-4) var(--space-8)`（4px 8px）
+     - `.week-calendar-table th, td`（モバイル）：`<padding: var(--space-8) 2px>` → `padding: var(--space-8) 0`（8px 0）
+     - `.cal-status`：モバイル `<padding: 2px 4px>` → `padding: var(--space-4)`（4px）、768px以上 `<padding: 2px 8px>` → `padding: var(--space-4) var(--space-8)`（4px 8px）
+     - `.tag-required` / `.tag-optional`：`<padding: 1px 6px>` → `padding: var(--space-4) var(--space-8)`（4px 8px）
+     - `.checkbox-wrap input[type="checkbox"]`：`<margin-top: 3px>` → `margin-top: var(--space-4)`（4px）
+     - `site/contact.html` 確認チェックボックス内の必須ラベル：`<style="margin-left: 6px;">` → `style="margin-left: 8px;"`（8px）
+
+2. **過去の記録の訂正（指摘5）**
+   - **設計書からの差分についての訂正**：初回記録にて「変更点なし（設計書どおりに実装）」と記載していたが、実際には初回実装時点で一部の文字サイズ（12px/13px/15px、375px未満の `h1` 28px）およびラベル等の余白（1px/2px/3px/6px）に設計規定との差分が存在していた。今回の修正により、文字サイズ・見出しサイズ・余白スケールともに設計規定へ一致させた（色トークンに対する淡色背景 `#E9F0ED` / `#F3ECE6` / `#F9ECEA` の補完定義のみ継続）。
+   - **フォーム入力項目数の数え違いの訂正**：初回記録の「根拠 2. HTML構造・リンク・アクセシビリティ検証」にて「`contact.html` の全フォームコントロール（6項目）」と記載したが、正しくは **7項目**（①お名前 `#contact-name`、②メールアドレス `#contact-email`、③ご用件 `#contact-topic`、④ご希望日 `#contact-date`、⑤人数 `#contact-guests`、⑥お問い合わせ内容 `#contact-message`、⑦デモの確認 `#contact-confirm`）である。7項目すべてに明示的な `<label for="...">` が紐付いている。
+
+### 根拠
+
+- **CSS全宣言の検査**：Pythonスクリプトで `site/css/style.css` 内の全 `font-size` 宣言（36箇所）を抽出し、最小値が `0.875rem`（14px）、本文系（`body`、`.menu-item-desc`、`.btn`、フォーム入力欄）が `1rem`（16px）以上、`h1` がモバイル `2rem`（32px）／768px以上 `2.5rem`（40px）であることを確認した。
+- **余白スケールの検査**：`site/css/style.css` 内の全 `padding` / `margin` / `gap` 宣言および `site/*.html` 内のインライン `style` 属性を抽出し、設計スケール（`4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80px`、`0`、`auto`、設計指定の横余白 `20px`、`.sr-only` の `-1px`）以外の数値が0件であることを確認した。
+- **320px幅での7列カレンダー寸法計算**：320px幅（左右余白20px×2を除いた表幅280px、7等分で1列40px・境界線1pxを除き内幅39px）において、曜日見出し（1文字＝14px）、日付（`11/10` 等5文字、`14px`・`letter-spacing: -0.02em` で約35px≦39px）、営業区分ラベル（`営業`/`定休`/`臨休` 2文字28px＋左右padding 4px×2＝36px≦39px）がいずれもセル内幅39pxに収まることを確認した。
+
+### 未確認のこと
+
+- 実ブラウザによる表示・操作検証（指摘4）は、もち側で別途実施するため本作業では未実施。
