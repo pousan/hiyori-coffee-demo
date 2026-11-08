@@ -1,0 +1,64 @@
+## UI Pro Max Search Results
+**Domain:** color | **Query:** cafe coffee warm vintage cream
+**Source:** colors.csv | **Found:** 3 results
+
+### Result 1
+- **Product Type:** Bakery/Cafe
+- **Primary:** #92400E
+- **On Primary:** #FFFFFF
+- **Secondary:** #B45309
+- **On Secondary:** #FFFFFF
+- **Accent:** #92400E
+- **On Accent:** #FFFFFF
+- **Background:** #FEF3C7
+- **Foreground:** #78350F
+- **Card:** #FFFFFF
+- **Card Foreground:** #78350F
+- **Muted:** #EDEEF0
+- **Muted Foreground:** #475569
+- **Border:** #FDE68A
+- **Destructive:** #DC2626
+- **On Destructive:** #FFFFFF
+- **Ring:** #92400E
+- **Notes:** Warm brown + cream white [Accent adjusted from #F8FAFC]
+
+### Result 2
+- **Product Type:** Notes & Writing App
+- **Primary:** #78716C
+- **On Primary:** #FFFFFF
+- **Secondary:** #A8A29E
+- **On Secondary:** #000000
+- **Accent:** #D97706
+- **On Accent:** #000000
+- **Background:** #FFFBEB
+- **Foreground:** #0F172A
+- **Card:** #FFFFFF
+- **Card Foreground:** #0F172A
+- **Muted:** #F6F6F6
+- **Muted Foreground:** #475569
+- **Border:** #EEEDED
+- **Destructive:** #DC2626
+- **On Destructive:** #FFFFFF
+- **Ring:** #78716C
+- **Notes:** Warm ink + amber accent on cream
+
+### Result 3
+- **Product Type:** Podcast Platform
+- **Primary:** #1E1B4B
+- **On Primary:** #FFFFFF
+- **Secondary:** #312E81
+- **On Secondary:** #FFFFFF
+- **Accent:** #F97316
+- **On Accent:** #0F172A
+- **Background:** #0F0F23
+- **Foreground:** #F8FAFC
+- **Card:** #1B1B30
+- **Card Foreground:** #F8FAFC
+- **Muted:** #27273B
+- **Muted Foreground:** #94A3B8
+- **Border:** #4338CA
+- **Destructive:** #EF4444
+- **On Destructive:** #000000
+- **Ring:** #FFFFFF
+- **Notes:** Dark audio + warm accent
+

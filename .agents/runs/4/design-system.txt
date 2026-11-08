@@ -1,0 +1,63 @@
+╔═════════════════════════════════════════════════════════════════════════════════════════╗
+║  TARGET: Hiyori Coffee - RECOMMENDED DESIGN SYSTEM                                      ║
+╚═════════════════════════════════════════════════════════════════════════════════════════╝
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+├─── PATTERN ─────────────────────────────────────────────────────────────────────────────┤
+│  Name: Funnel (3-Step Conversion)                                                       │
+│     Conversion: Progressive disclosure. Show only essential info per step. Use          │
+│     progress indicators. Multiple CTAs.                                                 │
+│     CTA: Each step: mini-CTA. Final: main CTA                                           │
+│     Sections:                                                                           │
+│       1. Hero                                                                           │
+│       2. Step 1 (problem)                                                               │
+│       3. Step 2 (solution)                                                              │
+│       4. Step 3 (action)                                                                │
+│       5. CTA progression                                                                │
+├─── STYLE ───────────────────────────────────────────────────────────────────────────────┤
+│  Name: Vibrant & Block-based                                                            │
+│     Mode Support: Light supported | Dark supported                                      │
+│     Keywords: Bold, energetic, playful, block layout, geometric shapes, high color      │
+│     contrast, duotone, modern, energetic                                                │
+│     Best For: Startups, creative agencies, gaming, social media, youth-focused,         │
+│     entertainment, consumer                                                             │
+│     Performance: cost:low|drivers:none | Accessibility:                                 │
+│     risk:conditional|requires:contrast-text-4.5,keyboard,visible-focus,reduced-motion   │
+├─── COLORS ──────────────────────────────────────────────────────────────────────────────┤
+│     Primary:           #92400E    (--color-primary)                                     │
+│     On Primary:        #FFFFFF    (--color-on-primary)                                  │
+│     Secondary:         #B45309    (--color-secondary)                                   │
+│     On Secondary:      #FFFFFF    (--color-on-secondary)                                │
+│     Accent/CTA:        #92400E    (--color-accent)                                      │
+│     On Accent/CTA:     #FFFFFF    (--color-on-accent)                                   │
+│     Background:        #FEF3C7    (--color-background)                                  │
+│     Foreground:        #78350F    (--color-foreground)                                  │
+│     Card:              #FFFFFF    (--color-card)                                        │
+│     Card Foreground:   #78350F    (--color-card-foreground)                             │
+│     Muted:             #EDEEF0    (--color-muted)                                       │
+│     Muted Foreground:  #475569    (--color-muted-foreground)                            │
+│     Border:            #FDE68A    (--color-border)                                      │
+│     Destructive:       #DC2626    (--color-destructive)                                 │
+│     On Destructive:    #FFFFFF    (--color-on-destructive)                              │
+│     Ring:              #92400E    (--color-ring)                                        │
+│     Notes: Warm brown + cream white [Accent adjusted from #F8FAFC]                      │
+├─── TYPOGRAPHY ──────────────────────────────────────────────────────────────────────────┤
+│  Press Start 2P / VT323                                                                 │
+│     Mood: pixel, retro, gaming, 8-bit, nostalgic, arcade                                │
+│     Best For: Pixel art games, retro websites, creative portfolios                      │
+│     Google Fonts:                                                                       │
+│     https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap   │
+│     CSS Import: @import url('https://fonts.googleapis.com/css2?family=Press+Start+2...  │
+├─── KEY EFFECTS ─────────────────────────────────────────────────────────────────────────┤
+│     Large sections (48px+ gaps), animated patterns, bold hover (color shift),           │
+│     scroll-snap, large type (32px+), 200-300ms                                          │
+├─── AVOID ───────────────────────────────────────────────────────────────────────────────┤
+│     Poor food photos + Hidden hours                                                     │
+├─── PRE-DELIVERY CHECKLIST ──────────────────────────────────────────────────────────────┤
+│     [ ] No emojis as icons (use SVG: Heroicons/Lucide)                                  │
+│     [ ] cursor-pointer on all clickable elements                                        │
+│     [ ] Hover states with smooth transitions (150-300ms)                                │
+│     [ ] Light mode: text contrast 4.5:1 minimum                                         │
+│     [ ] Focus states visible for keyboard nav                                           │
+│     [ ] prefers-reduced-motion respected                                                │
+│     [ ] Responsive: 375px, 768px, 1024px, 1440px                                        │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
