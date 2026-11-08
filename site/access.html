@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>営業日・アクセス｜ひより珈琲（架空カフェのデモ）</title>
+  <meta name="description" content="ひより珈琲（架空カフェのデモ）の営業時間、週間営業日カレンダー（サンプル）、住所およびひより駅からの道順をご案内します。">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/business-hours.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">本文へ移動</a>
+
+  <div class="demo-banner" role="region" aria-label="デモサイトの告知">
+    <p>架空のカフェのデモサイトです。掲載情報はサンプルです。実際の営業・予約受付は行っていません。</p>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="site-logo">ひより珈琲</a>
+      <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="global-nav">
+        <span class="nav-toggle-icon" aria-hidden="true"><span></span></span>
+        <span>メニューを開く</span>
+      </button>
+      <nav id="global-nav" class="global-nav" aria-label="主要ナビゲーション">
+        <ul class="global-nav-list">
+          <li><a href="menu.html" class="global-nav-link">メニュー</a></li>
+          <li><a href="about.html" class="global-nav-link">お店について</a></li>
+          <li><a href="access.html" class="global-nav-link" aria-current="page">営業日・アクセス</a></li>
+          <li><a href="contact.html" class="global-nav-link">お問い合わせ・予約</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ① 営業時間 -->
+    <section class="page-header">
+      <div class="container prose">
+        <h1>営業日・アクセス</h1>
+        <p>ご来店前に、営業日をご確認ください。</p>
+
+        <dl class="info-dl">
+          <div class="info-dl-row">
+            <dt>営業時間</dt>
+            <dd>9:00〜17:00</dd>
+          </div>
+          <div class="info-dl-row">
+            <dt>モーニング</dt>
+            <dd>9:00〜11:00</dd>
+          </div>
+          <div class="info-dl-row">
+            <dt>ラストオーダー</dt>
+            <dd>16:30</dd>
+          </div>
+          <div class="info-dl-row">
+            <dt>定休日</dt>
+            <dd>火曜日、ほか臨時休業あり</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ② 営業日カレンダー -->
+    <section class="section">
+      <div class="container">
+        <h2>営業日カレンダー</h2>
+        <div class="hours-meta prose">
+          <p data-hours-period>表示例：2026年11月9日〜15日</p>
+          <p class="hours-alert">火曜は定休日です。この週は12日（木）もお休みします。</p>
+          <p class="note-text" data-hours-status>営業日サンプルを表示しています。</p>
+        </div>
+
+        <noscript>
+          <div class="noscript-box">
+            JavaScriptが無効のため、営業日サンプルのカレンダー描画を表示できません。上記の営業時間・定休日（火曜日、ほか臨時休業あり）をご確認ください。表示例（2026年11月9日〜15日）では11月10日（火）が定休日、11月12日（木）が臨時休業です。
+          </div>
+        </noscript>
+
+        <table class="week-calendar-table" aria-label="週間営業日カレンダー（表示例：2026年11月9日〜15日）">
+          <thead>
+            <tr>
+              <th scope="col">月</th>
+              <th scope="col">火</th>
+              <th scope="col">水</th>
+              <th scope="col">木</th>
+              <th scope="col">金</th>
+              <th scope="col">土</th>
+              <th scope="col">日</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="week-calendar-row"></tr>
+          </tbody>
+        </table>
+
+        <div class="prose">
+          <p class="note-text" style="margin-bottom: 12px;">
+            ※カレンダー内の「定休＝定休日」「臨休＝臨時休業」です。各日の営業時間は以下の詳細一覧でもご確認いただけます。
+          </p>
+          <ul id="access-hours-detail" class="calendar-detail-list" aria-label="営業日サンプルの日別詳細一覧"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ③ アクセス -->
+    <section id="access" class="section">
+      <div class="container two-col-section">
+        <div class="prose">
+          <h2>アクセス案内（地図の代わり）</h2>
+          <div class="card" style="margin-bottom: 24px;">
+            <p style="font-weight: 700; margin-bottom: 4px;">東京都ひより区こもれび町2-8-3</p>
+            <p class="note-text">架空の住所です。実際の場所への案内には利用できません。</p>
+          </div>
+
+          <h3>駅からの道順</h3>
+          <ol class="route-list">
+            <li>ひより駅の南口を出て、商店街へ進みます。</li>
+            <li>商店街の時計台を左に曲がります。</li>
+            <li>住宅街を少し歩くと、右手に緑の扉が見えます。</li>
+          </ol>
+          <p class="note-text">駅から徒歩8分の設定です。駅・目印・道順はすべて架空です。</p>
+        </div>
+
+        <div class="illus-frame illus-ratio-4-3" aria-hidden="true">
+          <div class="illus-landmarks-grid">
+            <div class="illus-landmark-item">
+              <div class="illus-landmark-icon illus-icon-station"></div>
+              <span class="illus-landmark-label">1. ひより駅南口</span>
+            </div>
+            <div class="illus-landmark-item">
+              <div class="illus-landmark-icon illus-icon-clock"></div>
+              <span class="illus-landmark-label">2. 商店街の時計台</span>
+            </div>
+            <div class="illus-landmark-item">
+              <div class="illus-landmark-icon illus-icon-door"></div>
+              <span class="illus-landmark-label">3. 緑の扉</span>
+            </div>
+          </div>
+          <span class="illus-caption">イメージイラスト</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ④ 来店時の案内 -->
+    <section class="section">
+      <div class="container prose">
+        <h2>ご来店の前に</h2>
+        <p>
+          専用駐車場はありません。徒歩でのご来店を想定しています。<br>
+          お席やご利用について気になることは、お問い合わせページをご覧ください。
+        </p>
+        <div class="section-link-wrap">
+          <a href="contact.html" class="btn btn-secondary">お問い合わせ・予約</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-stack">
+      <!-- 1. 店名、短い紹介、営業時間 -->
+      <div class="prose">
+        <p class="footer-shop-title">ひより珈琲</p>
+        <p>住宅街の片隅で、珈琲とひと休み。</p>
+        <p class="note-text">9:00〜17:00／モーニング 9:00〜11:00／火曜定休・臨時休業あり</p>
+      </div>
+
+      <!-- 2. 全5ページへのリンク -->
+      <nav aria-label="フッターナビゲーション">
+        <ul class="footer-nav-list">
+          <li><a href="index.html" class="footer-nav-link">トップ</a></li>
+          <li><a href="menu.html" class="footer-nav-link">メニュー</a></li>
+          <li><a href="about.html" class="footer-nav-link">お店について</a></li>
+          <li><a href="access.html" class="footer-nav-link" aria-current="page">営業日・アクセス</a></li>
+          <li><a href="contact.html" class="footer-nav-link">お問い合わせ・予約</a></li>
+        </ul>
+      </nav>
+
+      <!-- 3. Instagram導線とQRの置き場 / 4. 口コミQRの置き場 -->
+      <div class="footer-qr-grid">
+        <div class="qr-card">
+          <div class="qr-card-text">
+            <p class="qr-card-title">Instagram</p>
+            <p class="note-text">日々のお知らせを載せる場所です。<br>デモのため、アカウントへのリンクはありません。</p>
+          </div>
+          <div class="qr-placeholder-box" aria-label="InstagramのQR設置位置（デモ用プレースホルダ）">
+            QR設置位置
+          </div>
+        </div>
+
+        <div class="qr-card">
+          <div class="qr-card-text">
+            <p class="qr-card-title">ご感想はこちら</p>
+            <p class="note-text">レジ横でご案内する口コミQRの設置イメージです。<br>デモのため、口コミの閲覧・投稿はできません。</p>
+          </div>
+          <div class="qr-placeholder-box" aria-label="口コミのQR設置位置（デモ用プレースホルダ）">
+            QR設置位置
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. デモの注記と著作権表記 -->
+      <div class="footer-bottom">
+        <p>当サイトはホームページ制作の実績紹介用に作成された架空店舗のデモサイトです。実在の店舗・団体とは一切関係ありません。</p>
+        <p>© ひより珈琲 — 架空店舗のデモサイト</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- スマホ固定下部バー -->
+  <nav class="mobile-bottom-bar" aria-label="スマホ用クイックメニュー">
+    <a href="contact.html#phone" class="mobile-bottom-link">
+      <span class="mobile-bottom-icon" aria-hidden="true">●</span>
+      <span>電話する</span>
+    </a>
+    <a href="access.html#access" class="mobile-bottom-link" aria-current="page">
+      <span class="mobile-bottom-icon" aria-hidden="true">▲</span>
+      <span>地図を見る</span>
+    </a>
+    <a href="menu.html" class="mobile-bottom-link">
+      <span class="mobile-bottom-icon" aria-hidden="true">■</span>
+      <span>メニュー</span>
+    </a>
+  </nav>
+</body>
+</html>

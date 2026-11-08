@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>お問い合わせ・予約｜ひより珈琲（架空カフェのデモ）</title>
+  <meta name="description" content="ひより珈琲（架空カフェのデモ）のお問い合わせ・お席のご相談ページ。操作体験用の送信モックフォームです。">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/contact.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">本文へ移動</a>
+
+  <div class="demo-banner" role="region" aria-label="デモサイトの告知">
+    <p>架空のカフェのデモサイトです。掲載情報はサンプルです。実際の営業・予約受付は行っていません。</p>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="site-logo">ひより珈琲</a>
+      <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="global-nav">
+        <span class="nav-toggle-icon" aria-hidden="true"><span></span></span>
+        <span>メニューを開く</span>
+      </button>
+      <nav id="global-nav" class="global-nav" aria-label="主要ナビゲーション">
+        <ul class="global-nav-list">
+          <li><a href="menu.html" class="global-nav-link">メニュー</a></li>
+          <li><a href="about.html" class="global-nav-link">お店について</a></li>
+          <li><a href="access.html" class="global-nav-link">営業日・アクセス</a></li>
+          <li><a href="contact.html" class="global-nav-link" aria-current="page">お問い合わせ・予約</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ① 導入 -->
+    <section class="page-header">
+      <div class="container prose">
+        <h1>お問い合わせ・予約</h1>
+        <p>お席のご相談や、お店についてのお問い合わせはこちらから。</p>
+        <div class="notice-banner-box" role="note">
+          <p>このページは操作体験用です。電話は発信されず、フォームの内容も送信・保存されません。実際の予約はできません。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ② 電話 -->
+    <section id="phone" class="section">
+      <div class="container prose">
+        <h2>お電話でのご相談</h2>
+        <p>営業時間内のご相談を想定した窓口です。小さな店のため、接客中は電話に出られない場合があります。</p>
+        <div class="phone-display-box">
+          <p class="phone-number-text">電話番号：未設定（デモ）</p>
+          <p class="note-text">受付時間の設定：9:00〜17:00／休業日を除く</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ③ フォーム -->
+    <section class="section">
+      <div class="container prose">
+        <h2>フォームでのご相談</h2>
+        <p class="note-text">
+          <strong>実際の氏名・メールアドレスなどの個人情報は入力しないでください。架空の内容でお試しください。</strong>
+        </p>
+
+        <noscript>
+          <div class="noscript-box">送信デモにはJavaScriptが必要です。</div>
+        </noscript>
+
+        <form id="contact-form" class="contact-form" action="#" method="post">
+          <!-- お名前 -->
+          <div class="form-field">
+            <label for="contact-name" class="form-label">
+              <span>お名前</span>
+              <span class="tag-required">必須</span>
+            </label>
+            <input
+              type="text"
+              id="contact-name"
+              name="name"
+              class="form-input"
+              maxlength="100"
+              required
+              autocomplete="off"
+              data-hint-id="contact-name-hint"
+              aria-describedby="contact-name-hint"
+            >
+            <p id="contact-name-hint" class="note-text" style="margin-top: 4px;">100文字以内（架空のお名前をご入力ください）</p>
+            <p id="contact-name-error" class="field-error" role="alert" hidden></p>
+          </div>
+
+          <!-- メールアドレス -->
+          <div class="form-field">
+            <label for="contact-email" class="form-label">
+              <span>メールアドレス</span>
+              <span class="tag-required">必須</span>
+            </label>
+            <input
+              type="email"
+              id="contact-email"
+              name="email"
+              class="form-input"
+              maxlength="254"
+              required
+              autocomplete="off"
+              data-hint-id="contact-email-hint"
+              aria-describedby="contact-email-hint"
+            >
+            <p id="contact-email-hint" class="note-text" style="margin-top: 4px;">254文字以内（例：sample@example.com）</p>
+            <p id="contact-email-error" class="field-error" role="alert" hidden></p>
+          </div>
+
+          <!-- ご用件 -->
+          <div class="form-field">
+            <label for="contact-topic" class="form-label">
+              <span>ご用件</span>
+              <span class="tag-required">必須</span>
+            </label>
+            <select
+              id="contact-topic"
+              name="topic"
+              class="form-select"
+              required
+            >
+              <option value="">選択してください</option>
+              <option value="inquiry">お問い合わせ</option>
+              <option value="seat">お席の相談</option>
+            </select>
+            <p id="contact-topic-error" class="field-error" role="alert" hidden></p>
+          </div>
+
+          <!-- お席の相談のときのみ表示される任意項目 -->
+          <div id="conditional-seat-fields" class="conditional-group" hidden>
+            <p class="note-text" style="margin-bottom: 16px;">
+              ご希望日・人数は操作体験用です。空席確認は行いません。
+            </p>
+
+            <div class="form-field">
+              <label for="contact-date" class="form-label">
+                <span>ご希望日</span>
+                <span class="tag-optional">任意</span>
+              </label>
+              <input
+                type="date"
+                id="contact-date"
+                name="preferred_date"
+                class="form-input"
+              >
+            </div>
+
+            <div class="form-field" style="margin-bottom: 0;">
+              <label for="contact-guests" class="form-label">
+                <span>人数</span>
+                <span class="tag-optional">任意</span>
+              </label>
+              <select id="contact-guests" name="guests" class="form-select">
+                <option value="">未選択</option>
+                <option value="1">1名</option>
+                <option value="2">2名</option>
+                <option value="3">3名</option>
+                <option value="4">4名</option>
+                <option value="5+">5名以上</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- お問い合わせ内容 -->
+          <div class="form-field">
+            <label for="contact-message" class="form-label">
+              <span>お問い合わせ内容</span>
+              <span class="tag-required">必須</span>
+            </label>
+            <textarea
+              id="contact-message"
+              name="message"
+              class="form-textarea"
+              maxlength="1000"
+              rows="5"
+              required
+              data-hint-id="contact-message-hint"
+              aria-describedby="contact-message-hint"
+            ></textarea>
+            <p id="contact-message-hint" class="note-text" style="margin-top: 4px;">1000文字以内</p>
+            <p id="contact-message-error" class="field-error" role="alert" hidden></p>
+          </div>
+
+          <!-- デモの確認 -->
+          <div class="form-field">
+            <div class="checkbox-wrap">
+              <input
+                type="checkbox"
+                id="contact-confirm"
+                name="demo_confirm"
+                required
+              >
+              <label for="contact-confirm" style="font-weight: 700; cursor: pointer;">
+                内容は送信されず、予約も成立しないことを確認しました。
+                <span class="tag-required" style="margin-left: 6px;">必須</span>
+              </label>
+            </div>
+            <p id="contact-confirm-error" class="field-error" role="alert" hidden></p>
+          </div>
+
+          <button type="submit" id="contact-submit" class="btn btn-primary" disabled>
+            送信を試す（デモ）
+          </button>
+
+          <!-- 失敗時のエラー要約 -->
+          <div id="form-error-summary" class="form-feedback is-error" role="alert" hidden></div>
+
+          <!-- 成功時の完了メッセージ -->
+          <div id="form-result" class="form-feedback is-success" role="status" aria-live="polite" hidden></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-stack">
+      <!-- 1. 店名、短い紹介、営業時間 -->
+      <div class="prose">
+        <p class="footer-shop-title">ひより珈琲</p>
+        <p>住宅街の片隅で、珈琲とひと休み。</p>
+        <p class="note-text">9:00〜17:00／モーニング 9:00〜11:00／火曜定休・臨時休業あり</p>
+      </div>
+
+      <!-- 2. 全5ページへのリンク -->
+      <nav aria-label="フッターナビゲーション">
+        <ul class="footer-nav-list">
+          <li><a href="index.html" class="footer-nav-link">トップ</a></li>
+          <li><a href="menu.html" class="footer-nav-link">メニュー</a></li>
+          <li><a href="about.html" class="footer-nav-link">お店について</a></li>
+          <li><a href="access.html" class="footer-nav-link">営業日・アクセス</a></li>
+          <li><a href="contact.html" class="footer-nav-link" aria-current="page">お問い合わせ・予約</a></li>
+        </ul>
+      </nav>
+
+      <!-- 3. Instagram導線とQRの置き場 / 4. 口コミQRの置き場 -->
+      <div class="footer-qr-grid">
+        <div class="qr-card">
+          <div class="qr-card-text">
+            <p class="qr-card-title">Instagram</p>
+            <p class="note-text">日々のお知らせを載せる場所です。<br>デモのため、アカウントへのリンクはありません。</p>
+          </div>
+          <div class="qr-placeholder-box" aria-label="InstagramのQR設置位置（デモ用プレースホルダ）">
+            QR設置位置
+          </div>
+        </div>
+
+        <div class="qr-card">
+          <div class="qr-card-text">
+            <p class="qr-card-title">ご感想はこちら</p>
+            <p class="note-text">レジ横でご案内する口コミQRの設置イメージです。<br>デモのため、口コミの閲覧・投稿はできません。</p>
+          </div>
+          <div class="qr-placeholder-box" aria-label="口コミのQR設置位置（デモ用プレースホルダ）">
+            QR設置位置
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. デモの注記と著作権表記 -->
+      <div class="footer-bottom">
+        <p>当サイトはホームページ制作の実績紹介用に作成された架空店舗のデモサイトです。実在の店舗・団体とは一切関係ありません。</p>
+        <p>© ひより珈琲 — 架空店舗のデモサイト</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- スマホ固定下部バー -->
+  <nav class="mobile-bottom-bar" aria-label="スマホ用クイックメニュー">
+    <a href="contact.html#phone" class="mobile-bottom-link" aria-current="page">
+      <span class="mobile-bottom-icon" aria-hidden="true">●</span>
+      <span>電話する</span>
+    </a>
+    <a href="access.html#access" class="mobile-bottom-link">
+      <span class="mobile-bottom-icon" aria-hidden="true">▲</span>
+      <span>地図を見る</span>
+    </a>
+    <a href="menu.html" class="mobile-bottom-link">
+      <span class="mobile-bottom-icon" aria-hidden="true">■</span>
+      <span>メニュー</span>
+    </a>
+  </nav>
+</body>
+</html>

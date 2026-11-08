@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>トップ｜ひより珈琲（架空カフェのデモ）</title>
+  <meta name="description" content="住宅街の小さな焙煎所、ひより珈琲（架空のカフェのデモサイト）。少しずつ焼いた豆と朝のトースト、季節の焼き菓子、今週の営業日サンプルやアクセスをご案内します。">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/business-hours.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">本文へ移動</a>
+
+  <div class="demo-banner" role="region" aria-label="デモサイトの告知">
+    <p>架空のカフェのデモサイトです。掲載情報はサンプルです。実際の営業・予約受付は行っていません。</p>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="site-logo" aria-current="page">ひより珈琲</a>
+      <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="global-nav">
+        <span class="nav-toggle-icon" aria-hidden="true"><span></span></span>
+        <span>メニューを開く</span>
+      </button>
+      <nav id="global-nav" class="global-nav" aria-label="主要ナビゲーション">
+        <ul class="global-nav-list">
+          <li><a href="menu.html" class="global-nav-link">メニュー</a></li>
+          <li><a href="about.html" class="global-nav-link">お店について</a></li>
+          <li><a href="access.html" class="global-nav-link">営業日・アクセス</a></li>
+          <li><a href="contact.html" class="global-nav-link">お問い合わせ・予約</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ① ファーストビュー -->
+    <section class="section">
+      <div class="container hero-grid">
+        <div class="hero-content prose">
+          <p class="note-text">ひより珈琲</p>
+          <h1>いつもの道に、珈琲のひと休み。</h1>
+          <p>
+            住宅街の小さな焙煎所、ひより珈琲。<br>
+            少しずつ焼いた豆と、朝のトースト、季節の焼き菓子をご用意しています。
+          </p>
+          <div class="hero-hours-box">
+            <p class="hero-hours-main">9:00〜17:00／火曜定休・臨時休業あり</p>
+            <p class="hero-hours-status" data-hours-status>営業日サンプルを表示しています。</p>
+          </div>
+          <div class="btn-group">
+            <a href="menu.html" class="btn btn-primary">メニューと価格</a>
+            <a href="access.html" class="btn btn-secondary">営業日・アクセス</a>
+          </div>
+        </div>
+
+        <div class="illus-frame illus-ratio-4-3" aria-hidden="true">
+          <div class="illus-window-scene">
+            <div class="illus-window"></div>
+            <div class="illus-leaf"></div>
+            <div class="illus-saucer"></div>
+            <div class="illus-cup"></div>
+            <div class="illus-table"></div>
+          </div>
+          <span class="illus-caption">イメージイラスト</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ② 今週の営業日 -->
+    <section class="section">
+      <div class="container">
+        <h2>今週の営業日</h2>
+        <div class="hours-meta prose">
+          <p data-hours-period>表示例：2026年11月9日〜15日</p>
+          <p class="hours-alert">11月12日（木）は臨時休業です。</p>
+        </div>
+
+        <noscript>
+          <div class="noscript-box">
+            JavaScriptが無効のため、営業日サンプルのカード一覧を表示できません。営業時間：9:00〜17:00（モーニング 9:00〜11:00／ラストオーダー 16:30）、定休日：火曜日・ほか臨時休業あり。表示例（2026年11月9日〜15日）では11月10日（火）が定休日、11月12日（木）が臨時休業です。
+          </div>
+        </noscript>
+
+        <ul id="weekly-hours-list" class="weekly-cards-list" aria-label="今週の営業日サンプル"></ul>
+
+        <div class="section-link-wrap">
+          <a href="access.html" class="btn btn-secondary">営業日を詳しく見る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ③ 店の楽しみ -->
+    <section class="section">
+      <div class="container">
+        <h2>ひよりの時間</h2>
+        <div class="cards-grid-3">
+          <article class="card">
+            <h3>朝のトースト</h3>
+            <p>9時から11時は、厚切りトーストと珈琲のセットをどうぞ。</p>
+          </article>
+          <article class="card">
+            <h3>少しずつ焙煎</h3>
+            <p>店内の小さな焙煎機で、豆の様子を見ながら焼いています。</p>
+          </article>
+          <article class="card">
+            <h3>窓口から、お持ち帰り</h3>
+            <p>散歩の途中にも。珈琲と焼き菓子をお持ち帰りいただけます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ④ アクセスの要約 -->
+    <section class="section">
+      <div class="container prose">
+        <h2>商店街の先、緑の扉が目印です。</h2>
+        <p>
+          ひより駅から歩いて8分。商店街を抜けた住宅街にあります。<br>
+          <span class="note-text">駅・住所・道順は架空の設定です。</span>
+        </p>
+        <div class="section-link-wrap">
+          <a href="access.html#access" class="btn btn-secondary">住所と道順を見る</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-stack">
+      <!-- 1. 店名、短い紹介、営業時間 -->
+      <div class="prose">
+        <p class="footer-shop-title">ひより珈琲</p>
+        <p>住宅街の片隅で、珈琲とひと休み。</p>
+        <p class="note-text">9:00〜17:00／モーニング 9:00〜11:00／火曜定休・臨時休業あり</p>
+      </div>
+
+      <!-- 2. 全5ページへのリンク -->
+      <nav aria-label="フッターナビゲーション">
+        <ul class="footer-nav-list">
+          <li><a href="index.html" class="footer-nav-link" aria-current="page">トップ</a></li>
+          <li><a href="menu.html" class="footer-nav-link">メニュー</a></li>
+          <li><a href="about.html" class="footer-nav-link">お店について</a></li>
+          <li><a href="access.html" class="footer-nav-link">営業日・アクセス</a></li>
+          <li><a href="contact.html" class="footer-nav-link">お問い合わせ・予約</a></li>
+        </ul>
+      </nav>
+
+      <!-- 3. Instagram導線とQRの置き場 / 4. 口コミQRの置き場 -->
+      <div class="footer-qr-grid">
+        <div class="qr-card">
+          <div class="qr-card-text">
+            <p class="qr-card-title">Instagram</p>
+            <p class="note-text">日々のお知らせを載せる場所です。<br>デモのため、アカウントへのリンクはありません。</p>
+          </div>
+          <div class="qr-placeholder-box" aria-label="InstagramのQR設置位置（デモ用プレースホルダ）">
+            QR設置位置
+          </div>
+        </div>
+
+        <div class="qr-card">
+          <div class="qr-card-text">
+            <p class="qr-card-title">ご感想はこちら</p>
+            <p class="note-text">レジ横でご案内する口コミQRの設置イメージです。<br>デモのため、口コミの閲覧・投稿はできません。</p>
+          </div>
+          <div class="qr-placeholder-box" aria-label="口コミのQR設置位置（デモ用プレースホルダ）">
+            QR設置位置
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. デモの注記と著作権表記 -->
+      <div class="footer-bottom">
+        <p>当サイトはホームページ制作の実績紹介用に作成された架空店舗のデモサイトです。実在の店舗・団体とは一切関係ありません。</p>
+        <p>© ひより珈琲 — 架空店舗のデモサイト</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- スマホ固定下部バー -->
+  <nav class="mobile-bottom-bar" aria-label="スマホ用クイックメニュー">
+    <a href="contact.html#phone" class="mobile-bottom-link">
+      <span class="mobile-bottom-icon" aria-hidden="true">●</span>
+      <span>電話する</span>
+    </a>
+    <a href="access.html#access" class="mobile-bottom-link">
+      <span class="mobile-bottom-icon" aria-hidden="true">▲</span>
+      <span>地図を見る</span>
+    </a>
+    <a href="menu.html" class="mobile-bottom-link">
+      <span class="mobile-bottom-icon" aria-hidden="true">■</span>
+      <span>メニュー</span>
+    </a>
+  </nav>
+</body>
+</html>
