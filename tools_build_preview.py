@@ -6,6 +6,7 @@ scripts moved to end of body which matches defer semantics). A tiny interceptor
 in each page forwards cross-page link clicks to the shell, which switches the
 visible iframe. The original site files are untouched.
 """
+import base64
 import html
 import re
 from pathlib import Path
@@ -67,6 +68,13 @@ def build_page(name: str) -> str:
     for m in re.finditer(r'<script src="js/([a-z-]+)\.js" defer></script>', doc):
         scripts.append((SITE / f"js/{m.group(1)}.js").read_text(encoding="utf-8"))
     doc = re.sub(r'<script src="js/[a-z-]+\.js" defer></script>\n?', "", doc)
+    # inline images as data URIs so the single file stays self-contained
+    def _inline_img(m: "re.Match[str]") -> str:
+        img_path = SITE / m.group(1)
+        data = base64.b64encode(img_path.read_bytes()).decode("ascii")
+        return f'src="data:image/jpeg;base64,{data}"'
+
+    doc = re.sub(r'src="(images/[a-z-]+\.jpg)"', _inline_img, doc)
     injected = "".join("<script>\n" + s + "\n</script>\n" for s in scripts)
     doc = doc.replace("</body>", injected + INTERCEPTOR + "</body>")
     return doc
