@@ -1680,10 +1680,87 @@ h1, h2, h3 {
   }
 }
 
+/* --- run 6: Studio Miraie demo attribution &amp; recruitment top bar --- */
+.studio-bar {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background-color: var(--color-green); /* #1C1917 Espresso Black */
+  color: var(--bg-base); /* #FAF7F2 Ivory */
+  border-bottom: 1px solid rgba(161, 98, 7, 0.45);
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.5;
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+
+.studio-bar-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  text-align: center;
+}
+
+.studio-bar-text {
+  margin: 0;
+  color: var(--bg-base);
+  letter-spacing: 0.02em;
+}
+
+.studio-bar-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4) var(--space-12);
+  color: var(--bg-base);
+  background-color: transparent;
+  border: 1px solid var(--color-accent); /* #A16207 Gold */
+  border-radius: var(--radius-btn);
+  font-size: 0.875rem; /* 14px */
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.studio-bar-cta:hover {
+  background-color: rgba(161, 98, 7, 0.25);
+  color: var(--bg-surface);
+  border-color: #C9A35C;
+}
+
+.studio-bar-cta:focus-visible {
+  outline: 2px solid var(--bg-surface);
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .studio-bar-inner {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-16);
+  }
+}
+
+/* Offset anchor scroll targets for the sticky studio-bar */
+[id] {
+  scroll-margin-top: calc(var(--space-64) + var(--space-24));
+}
+
+
 &lt;/style&gt;
     &lt;/head&gt;
 &lt;body&gt;
   &lt;a href=&quot;#main-content&quot; class=&quot;skip-link&quot;&gt;本文へ移動&lt;/a&gt;
+
+  &lt;aside class=&quot;studio-bar&quot; aria-label=&quot;制作元の案内&quot;&gt;
+    &lt;div class=&quot;container studio-bar-inner&quot;&gt;
+      &lt;p class=&quot;studio-bar-text&quot;&gt;このサイトは Studio Miraie の制作見本（デモ）です&lt;/p&gt;
+      &lt;a href=&quot;https://studio-miraie-portfolio.vercel.app&quot; class=&quot;studio-bar-cta&quot;&gt;あなたの店のサイト制作はこちら&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/aside&gt;
 
   &lt;div class=&quot;demo-banner&quot; role=&quot;region&quot; aria-label=&quot;デモサイトの告知&quot;&gt;
     &lt;p&gt;架空のカフェのデモサイトです。掲載情報はサンプルです。実際の営業・予約受付は行っていません。&lt;/p&gt;
@@ -3975,10 +4052,87 @@ h1, h2, h3 {
   }
 }
 
+/* --- run 6: Studio Miraie demo attribution &amp; recruitment top bar --- */
+.studio-bar {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background-color: var(--color-green); /* #1C1917 Espresso Black */
+  color: var(--bg-base); /* #FAF7F2 Ivory */
+  border-bottom: 1px solid rgba(161, 98, 7, 0.45);
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.5;
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+
+.studio-bar-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  text-align: center;
+}
+
+.studio-bar-text {
+  margin: 0;
+  color: var(--bg-base);
+  letter-spacing: 0.02em;
+}
+
+.studio-bar-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4) var(--space-12);
+  color: var(--bg-base);
+  background-color: transparent;
+  border: 1px solid var(--color-accent); /* #A16207 Gold */
+  border-radius: var(--radius-btn);
+  font-size: 0.875rem; /* 14px */
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.studio-bar-cta:hover {
+  background-color: rgba(161, 98, 7, 0.25);
+  color: var(--bg-surface);
+  border-color: #C9A35C;
+}
+
+.studio-bar-cta:focus-visible {
+  outline: 2px solid var(--bg-surface);
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .studio-bar-inner {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-16);
+  }
+}
+
+/* Offset anchor scroll targets for the sticky studio-bar */
+[id] {
+  scroll-margin-top: calc(var(--space-64) + var(--space-24));
+}
+
+
 &lt;/style&gt;
   &lt;/head&gt;
 &lt;body&gt;
   &lt;a href=&quot;#main-content&quot; class=&quot;skip-link&quot;&gt;本文へ移動&lt;/a&gt;
+
+  &lt;aside class=&quot;studio-bar&quot; aria-label=&quot;制作元の案内&quot;&gt;
+    &lt;div class=&quot;container studio-bar-inner&quot;&gt;
+      &lt;p class=&quot;studio-bar-text&quot;&gt;このサイトは Studio Miraie の制作見本（デモ）です&lt;/p&gt;
+      &lt;a href=&quot;https://studio-miraie-portfolio.vercel.app&quot; class=&quot;studio-bar-cta&quot;&gt;あなたの店のサイト制作はこちら&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/aside&gt;
 
   &lt;div class=&quot;demo-banner&quot; role=&quot;region&quot; aria-label=&quot;デモサイトの告知&quot;&gt;
     &lt;p&gt;架空のカフェのデモサイトです。掲載情報はサンプルです。実際の営業・予約受付は行っていません。&lt;/p&gt;
@@ -6039,10 +6193,87 @@ h1, h2, h3 {
   }
 }
 
+/* --- run 6: Studio Miraie demo attribution &amp; recruitment top bar --- */
+.studio-bar {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background-color: var(--color-green); /* #1C1917 Espresso Black */
+  color: var(--bg-base); /* #FAF7F2 Ivory */
+  border-bottom: 1px solid rgba(161, 98, 7, 0.45);
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.5;
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+
+.studio-bar-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  text-align: center;
+}
+
+.studio-bar-text {
+  margin: 0;
+  color: var(--bg-base);
+  letter-spacing: 0.02em;
+}
+
+.studio-bar-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4) var(--space-12);
+  color: var(--bg-base);
+  background-color: transparent;
+  border: 1px solid var(--color-accent); /* #A16207 Gold */
+  border-radius: var(--radius-btn);
+  font-size: 0.875rem; /* 14px */
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.studio-bar-cta:hover {
+  background-color: rgba(161, 98, 7, 0.25);
+  color: var(--bg-surface);
+  border-color: #C9A35C;
+}
+
+.studio-bar-cta:focus-visible {
+  outline: 2px solid var(--bg-surface);
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .studio-bar-inner {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-16);
+  }
+}
+
+/* Offset anchor scroll targets for the sticky studio-bar */
+[id] {
+  scroll-margin-top: calc(var(--space-64) + var(--space-24));
+}
+
+
 &lt;/style&gt;
   &lt;/head&gt;
 &lt;body&gt;
   &lt;a href=&quot;#main-content&quot; class=&quot;skip-link&quot;&gt;本文へ移動&lt;/a&gt;
+
+  &lt;aside class=&quot;studio-bar&quot; aria-label=&quot;制作元の案内&quot;&gt;
+    &lt;div class=&quot;container studio-bar-inner&quot;&gt;
+      &lt;p class=&quot;studio-bar-text&quot;&gt;このサイトは Studio Miraie の制作見本（デモ）です&lt;/p&gt;
+      &lt;a href=&quot;https://studio-miraie-portfolio.vercel.app&quot; class=&quot;studio-bar-cta&quot;&gt;あなたの店のサイト制作はこちら&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/aside&gt;
 
   &lt;div class=&quot;demo-banner&quot; role=&quot;region&quot; aria-label=&quot;デモサイトの告知&quot;&gt;
     &lt;p&gt;架空のカフェのデモサイトです。掲載情報はサンプルです。実際の営業・予約受付は行っていません。&lt;/p&gt;
@@ -7999,10 +8230,87 @@ h1, h2, h3 {
   }
 }
 
+/* --- run 6: Studio Miraie demo attribution &amp; recruitment top bar --- */
+.studio-bar {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background-color: var(--color-green); /* #1C1917 Espresso Black */
+  color: var(--bg-base); /* #FAF7F2 Ivory */
+  border-bottom: 1px solid rgba(161, 98, 7, 0.45);
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.5;
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+
+.studio-bar-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  text-align: center;
+}
+
+.studio-bar-text {
+  margin: 0;
+  color: var(--bg-base);
+  letter-spacing: 0.02em;
+}
+
+.studio-bar-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4) var(--space-12);
+  color: var(--bg-base);
+  background-color: transparent;
+  border: 1px solid var(--color-accent); /* #A16207 Gold */
+  border-radius: var(--radius-btn);
+  font-size: 0.875rem; /* 14px */
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.studio-bar-cta:hover {
+  background-color: rgba(161, 98, 7, 0.25);
+  color: var(--bg-surface);
+  border-color: #C9A35C;
+}
+
+.studio-bar-cta:focus-visible {
+  outline: 2px solid var(--bg-surface);
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .studio-bar-inner {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-16);
+  }
+}
+
+/* Offset anchor scroll targets for the sticky studio-bar */
+[id] {
+  scroll-margin-top: calc(var(--space-64) + var(--space-24));
+}
+
+
 &lt;/style&gt;
     &lt;/head&gt;
 &lt;body&gt;
   &lt;a href=&quot;#main-content&quot; class=&quot;skip-link&quot;&gt;本文へ移動&lt;/a&gt;
+
+  &lt;aside class=&quot;studio-bar&quot; aria-label=&quot;制作元の案内&quot;&gt;
+    &lt;div class=&quot;container studio-bar-inner&quot;&gt;
+      &lt;p class=&quot;studio-bar-text&quot;&gt;このサイトは Studio Miraie の制作見本（デモ）です&lt;/p&gt;
+      &lt;a href=&quot;https://studio-miraie-portfolio.vercel.app&quot; class=&quot;studio-bar-cta&quot;&gt;あなたの店のサイト制作はこちら&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/aside&gt;
 
   &lt;div class=&quot;demo-banner&quot; role=&quot;region&quot; aria-label=&quot;デモサイトの告知&quot;&gt;
     &lt;p&gt;架空のカフェのデモサイトです。掲載情報はサンプルです。実際の営業・予約受付は行っていません。&lt;/p&gt;
@@ -10268,10 +10576,87 @@ h1, h2, h3 {
   }
 }
 
+/* --- run 6: Studio Miraie demo attribution &amp; recruitment top bar --- */
+.studio-bar {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background-color: var(--color-green); /* #1C1917 Espresso Black */
+  color: var(--bg-base); /* #FAF7F2 Ivory */
+  border-bottom: 1px solid rgba(161, 98, 7, 0.45);
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.5;
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+
+.studio-bar-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  text-align: center;
+}
+
+.studio-bar-text {
+  margin: 0;
+  color: var(--bg-base);
+  letter-spacing: 0.02em;
+}
+
+.studio-bar-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4) var(--space-12);
+  color: var(--bg-base);
+  background-color: transparent;
+  border: 1px solid var(--color-accent); /* #A16207 Gold */
+  border-radius: var(--radius-btn);
+  font-size: 0.875rem; /* 14px */
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.studio-bar-cta:hover {
+  background-color: rgba(161, 98, 7, 0.25);
+  color: var(--bg-surface);
+  border-color: #C9A35C;
+}
+
+.studio-bar-cta:focus-visible {
+  outline: 2px solid var(--bg-surface);
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .studio-bar-inner {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-16);
+  }
+}
+
+/* Offset anchor scroll targets for the sticky studio-bar */
+[id] {
+  scroll-margin-top: calc(var(--space-64) + var(--space-24));
+}
+
+
 &lt;/style&gt;
     &lt;/head&gt;
 &lt;body&gt;
   &lt;a href=&quot;#main-content&quot; class=&quot;skip-link&quot;&gt;本文へ移動&lt;/a&gt;
+
+  &lt;aside class=&quot;studio-bar&quot; aria-label=&quot;制作元の案内&quot;&gt;
+    &lt;div class=&quot;container studio-bar-inner&quot;&gt;
+      &lt;p class=&quot;studio-bar-text&quot;&gt;このサイトは Studio Miraie の制作見本（デモ）です&lt;/p&gt;
+      &lt;a href=&quot;https://studio-miraie-portfolio.vercel.app&quot; class=&quot;studio-bar-cta&quot;&gt;あなたの店のサイト制作はこちら&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/aside&gt;
 
   &lt;div class=&quot;demo-banner&quot; role=&quot;region&quot; aria-label=&quot;デモサイトの告知&quot;&gt;
     &lt;p&gt;架空のカフェのデモサイトです。掲載情報はサンプルです。実際の営業・予約受付は行っていません。&lt;/p&gt;
