@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>お店について｜ひより珈琲（架空カフェのデモ）</title>
+  <meta name="description" content="ひより珈琲（架空カフェのデモ）のお店紹介。店内の小さな焙煎機で少量ずつ焼く珈琲豆、店主の紹介、店内での過ごし方をご案内します。">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">本文へ移動</a>
+
+  <aside class="studio-bar" aria-label="制作元の案内">
+    <div class="container studio-bar-inner">
+      <p class="studio-bar-text">このサイトは Studio Miraie の制作見本（デモ）です</p>
+      <a href="https://studio-miraie-portfolio.vercel.app" class="studio-bar-cta">あなたの店のサイト制作はこちら</a>
+    </div>
+  </aside>
+
+  <div class="demo-banner" role="region" aria-label="デモサイトの告知">
+    <p>架空のカフェのデモサイトです。掲載情報はサンプルです。実際の営業・予約受付は行っていません。</p>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="site-logo">ひより珈琲</a>
+      <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="global-nav">
+        <span class="nav-toggle-icon" aria-hidden="true"><span></span></span>
+        <span>メニューを開く</span>
+      </button>
+      <nav id="global-nav" class="global-nav" aria-label="主要ナビゲーション">
+        <ul class="global-nav-list">
+          <li><a href="menu.html" class="global-nav-link">メニュー</a></li>
+          <li><a href="about.html" class="global-nav-link" aria-current="page">お店について</a></li>
+          <li><a href="access.html" class="global-nav-link">営業日・アクセス</a></li>
+          <li><a href="contact.html" class="global-nav-link">お問い合わせ・予約</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ① 導入 -->
+    <section class="page-header">
+      <div class="container prose">
+        <p class="section-label">ABOUT US</p>
+        <h1>いつもの一杯を、少しずつ。</h1>
+        <p>
+          ひより珈琲は、商店街の外れにある小さなカフェです。<br>
+          朝のひと息にも、散歩の寄り道にも。暮らしの途中で立ち寄れる場所を目指しています。
+        </p>
+      </div>
+    </section>
+
+    <!-- ② 焙煎 -->
+    <section class="section">
+      <div class="container two-col-section">
+        <div class="prose">
+          <p class="section-label">SMALL BATCH ROASTING</p>
+          <h2>小さな焙煎機から</h2>
+          <p>
+            店内で少量ずつ焙煎しています。豆の香りや色を確かめながら、その日の仕込みを進めます。<br>
+            飲み方に迷ったら、お好みを聞かせてください。
+          </p>
+        </div>
+
+        <figure class="photo-frame">
+          <img
+            src="images/roasting.jpg"
+            alt="小さな焙煎機と珈琲豆を確かめる手元（イメージ写真）"
+            width="1600"
+            height="1067"
+          >
+          <figcaption class="photo-caption">イメージ写真</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ③ 店主紹介 -->
+    <section class="section">
+      <div class="container prose">
+        <p class="section-label">FROM THE OWNER</p>
+        <h2>店主から</h2>
+        <div class="card">
+          <p>
+            店主のはるです。珈琲を淹れる時間と、パンが焼ける香りが好きで、この店を始めました。<br>
+            スタッフと二人、小さな店のペースでお迎えします。
+          </p>
+          <p class="note-text" style="margin-top: 12px;">店主・スタッフの紹介は架空の設定です。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ④ 過ごし方 -->
+    <section class="section">
+      <div class="container prose">
+        <p class="section-label">AT YOUR PACE</p>
+        <h2>それぞれの、ひと休みを</h2>
+        <p>
+          本を読んだり、少し仕事をしたり、ご家族でおやつを分けたり。思い思いにお過ごしください。<br>
+          混み合う時間には、お席の譲り合いをお願いしています。
+        </p>
+        <div class="section-link-wrap">
+          <a href="menu.html" class="btn btn-secondary">メニューを見る</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-stack">
+      <!-- 1. 店名、短い紹介、営業時間 -->
+      <div class="prose">
+        <p class="footer-shop-title">ひより珈琲</p>
+        <p>住宅街の片隅で、珈琲とひと休み。</p>
+        <p class="note-text">9:00〜17:00／モーニング 9:00〜11:00／火曜定休・臨時休業あり</p>
+      </div>
+
+      <!-- 2. 全5ページへのリンク -->
+      <nav aria-label="フッターナビゲーション">
+        <ul class="footer-nav-list">
+          <li><a href="index.html" class="footer-nav-link">トップ</a></li>
+          <li><a href="menu.html" class="footer-nav-link">メニュー</a></li>
+          <li><a href="about.html" class="footer-nav-link" aria-current="page">お店について</a></li>
+          <li><a href="access.html" class="footer-nav-link">営業日・アクセス</a></li>
+          <li><a href="contact.html" class="footer-nav-link">お問い合わせ・予約</a></li>
+        </ul>
+      </nav>
+
+      <!-- 3. Instagram導線とQRの置き場 / 4. 口コミQRの置き場 -->
+      <div class="footer-qr-grid">
+        <div class="qr-card">
+          <div class="qr-card-text">
+            <p class="qr-card-title">Instagram</p>
+            <p class="note-text">日々のお知らせを載せる場所です。<br>デモのため、アカウントへのリンクはありません。</p>
+          </div>
+          <div class="qr-placeholder-box" aria-label="InstagramのQR設置位置（デモ用プレースホルダ）">
+            QR設置位置
+          </div>
+        </div>
+
+        <div class="qr-card">
+          <div class="qr-card-text">
+            <p class="qr-card-title">ご感想はこちら</p>
+            <p class="note-text">レジ横でご案内する口コミQRの設置イメージです。<br>デモのため、口コミの閲覧・投稿はできません。</p>
+          </div>
+          <div class="qr-placeholder-box" aria-label="口コミのQR設置位置（デモ用プレースホルダ）">
+            QR設置位置
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. デモの注記と著作権表記 -->
+      <div class="footer-bottom">
+        <p>当サイトはホームページ制作の実績紹介用に作成された架空店舗のデモサイトです。実在の店舗・団体とは一切関係ありません。</p>
+        <p>© ひより珈琲 — 架空店舗のデモサイト</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- スマホ固定下部バー -->
+  <nav class="mobile-bottom-bar" aria-label="スマホ用クイックメニュー">
+    <a href="contact.html#phone" class="mobile-bottom-link">
+      <span class="mobile-bottom-icon" aria-hidden="true">●</span>
+      <span>電話する</span>
+    </a>
+    <a href="access.html#access" class="mobile-bottom-link">
+      <span class="mobile-bottom-icon" aria-hidden="true">▲</span>
+      <span>地図を見る</span>
+    </a>
+    <a href="menu.html" class="mobile-bottom-link">
+      <span class="mobile-bottom-icon" aria-hidden="true">■</span>
+      <span>メニュー</span>
+    </a>
+  </nav>
+</body>
+</html>

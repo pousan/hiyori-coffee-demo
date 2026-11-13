@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>メニュー｜ひより珈琲（架空カフェのデモ）</title>
+  <meta name="description" content="ひより珈琲（架空カフェのデモ）のメニューと価格一覧。9時〜11時のモーニングトーストセット、自家焙煎の珈琲、季節の焼き菓子、窓口テイクアウト、豆の量り売りをご案内します。">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">本文へ移動</a>
+
+  <aside class="studio-bar" aria-label="制作元の案内">
+    <div class="container studio-bar-inner">
+      <p class="studio-bar-text">このサイトは Studio Miraie の制作見本（デモ）です</p>
+      <a href="https://studio-miraie-portfolio.vercel.app" class="studio-bar-cta">あなたの店のサイト制作はこちら</a>
+    </div>
+  </aside>
+
+  <div class="demo-banner" role="region" aria-label="デモサイトの告知">
+    <p>架空のカフェのデモサイトです。掲載情報はサンプルです。実際の営業・予約受付は行っていません。</p>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="site-logo">ひより珈琲</a>
+      <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="global-nav">
+        <span class="nav-toggle-icon" aria-hidden="true"><span></span></span>
+        <span>メニューを開く</span>
+      </button>
+      <nav id="global-nav" class="global-nav" aria-label="主要ナビゲーション">
+        <ul class="global-nav-list">
+          <li><a href="menu.html" class="global-nav-link" aria-current="page">メニュー</a></li>
+          <li><a href="about.html" class="global-nav-link">お店について</a></li>
+          <li><a href="access.html" class="global-nav-link">営業日・アクセス</a></li>
+          <li><a href="contact.html" class="global-nav-link">お問い合わせ・予約</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ① ページ導入 -->
+    <section class="page-header">
+      <div class="container prose">
+        <p class="section-label">MENU</p>
+        <h1>メニュー</h1>
+        <p>一杯の珈琲と、少しおなかを満たすもの。朝にも、おやつの時間にも。</p>
+        <p class="note-text">価格はすべて税込の架空の設定です。季節の品は内容が変わります。</p>
+      </div>
+    </section>
+
+    <!-- ② モーニング -->
+    <section class="section">
+      <div class="container menu-section-body">
+        <p class="section-label">MORNING SET</p>
+        <h2>朝のひより　9:00〜11:00</h2>
+        <p>トーストが焼けるまで、珈琲を飲んでひと息。</p>
+
+        <!-- 写真つき特集カード 1: 厚切りトーストセット -->
+        <article class="menu-featured-card">
+          <div class="menu-featured-media">
+            <img
+              src="images/toast-set.jpg"
+              alt="厚切りバタートーストとゆで卵、ブレンド珈琲のセット（イメージ写真）"
+              width="1600"
+              height="1067"
+            >
+            <span class="photo-caption">イメージ写真</span>
+          </div>
+          <div class="menu-featured-body">
+            <div class="menu-item-header">
+              <h3 class="menu-item-name">厚切りトーストセット</h3>
+              <span class="menu-item-price">680円</span>
+            </div>
+            <p class="menu-item-desc">バタートースト、ゆで卵、ブレンド珈琲。</p>
+          </div>
+        </article>
+
+        <!-- 従来のテキスト行 -->
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item-header">
+              <h3 class="menu-item-name">チーズトーストセット</h3>
+              <span class="menu-item-price">780円</span>
+            </div>
+            <p class="menu-item-desc">チーズトースト、小さなサラダ、ブレンド珈琲。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ③ 珈琲と飲みもの -->
+    <section class="section">
+      <div class="container menu-section-body">
+        <p class="section-label">COFFEE &amp; DRINKS</p>
+        <h2>珈琲と飲みもの</h2>
+
+        <!-- 写真つき特集カード 2: ひよりブレンド -->
+        <article class="menu-featured-card">
+          <div class="menu-featured-media">
+            <img
+              src="images/blend.jpg"
+              alt="木のテーブルに置かれたひよりブレンドの珈琲カップ（イメージ写真）"
+              width="1600"
+              height="1067"
+              loading="lazy"
+            >
+            <span class="photo-caption">イメージ写真</span>
+          </div>
+          <div class="menu-featured-body">
+            <div class="menu-item-header">
+              <h3 class="menu-item-name">ひよりブレンド</h3>
+              <span class="menu-item-price">480円</span>
+            </div>
+            <p class="menu-item-desc">香ばしさと、やわらかな苦み。ホット・アイス。</p>
+          </div>
+        </article>
+
+        <!-- 従来のテキスト行 -->
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item-header">
+              <h3 class="menu-item-name">本日の珈琲</h3>
+              <span class="menu-item-price">530円</span>
+            </div>
+            <p class="menu-item-desc">その日にご用意している豆で淹れます。</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-header">
+              <h3 class="menu-item-name">カフェオレ</h3>
+              <span class="menu-item-price">560円</span>
+            </div>
+            <p class="menu-item-desc">珈琲に温めたミルクを合わせて。ホット・アイス。</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item-header">
+              <h3 class="menu-item-name">りんごジュース</h3>
+              <span class="menu-item-price">400円</span>
+            </div>
+            <p class="menu-item-desc">珈琲を飲まない方にも。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ④ 季節の焼き菓子 -->
+    <section class="section">
+      <div class="container menu-section-body">
+        <p class="section-label">BAKED SWEETS</p>
+        <h2>珈琲のとなりに</h2>
+
+        <!-- 写真つき特集カード 3: りんごの焼きケーキ -->
+        <article class="menu-featured-card">
+          <div class="menu-featured-media">
+            <img
+              src="images/cake.jpg"
+              alt="お皿に盛り付けたりんごの焼きケーキ（イメージ写真）"
+              width="1600"
+              height="1067"
+              loading="lazy"
+            >
+            <span class="photo-caption">イメージ写真</span>
+          </div>
+          <div class="menu-featured-body">
+            <div class="menu-item-header">
+              <h3 class="menu-item-name">りんごの焼きケーキ</h3>
+              <span class="menu-item-price">420円</span>
+            </div>
+            <p class="menu-item-desc">りんごとシナモンを合わせた、秋の焼き菓子。</p>
+          </div>
+        </article>
+
+        <!-- 従来のテキスト行 -->
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item-header">
+              <h3 class="menu-item-name">バタークッキー</h3>
+              <span class="menu-item-price">250円</span>
+            </div>
+            <p class="menu-item-desc">ひと休みにちょうどよい、小さな3枚。</p>
+          </li>
+        </ul>
+
+        <p class="note-text" style="margin-top: 16px;">原材料やアレルギーについては、ご注文前にスタッフへお尋ねください。</p>
+      </div>
+    </section>
+
+    <!-- ⑤ テイクアウト -->
+    <section class="section">
+      <div class="container prose">
+        <p class="section-label">TAKEOUT</p>
+        <h2>窓口から、お持ち帰り</h2>
+        <p>
+          飲みものと焼き菓子は、お持ち帰りもできます。店頭でお声がけください。<br>
+          掲載価格は店内・お持ち帰り共通です。トーストセットは店内のみのご提供です。
+        </p>
+      </div>
+    </section>
+
+    <!-- ⑥ 豆の量り売り -->
+    <section class="section">
+      <div class="container prose">
+        <p class="section-label">COFFEE BEANS</p>
+        <h2>おうちでも、ひよりの珈琲</h2>
+        <p>ひよりブレンドを100gから量り売りしています。豆のままでも、粉に挽いても。</p>
+        <div class="beans-box">
+          <p class="beans-price">ひよりブレンド 100g　750円（税込）</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-stack">
+      <!-- 1. 店名、短い紹介、営業時間 -->
+      <div class="prose">
+        <p class="footer-shop-title">ひより珈琲</p>
+        <p>住宅街の片隅で、珈琲とひと休み。</p>
+        <p class="note-text">9:00〜17:00／モーニング 9:00〜11:00／火曜定休・臨時休業あり</p>
+      </div>
+
+      <!-- 2. 全5ページへのリンク -->
+      <nav aria-label="フッターナビゲーション">
+        <ul class="footer-nav-list">
+          <li><a href="index.html" class="footer-nav-link">トップ</a></li>
+          <li><a href="menu.html" class="footer-nav-link" aria-current="page">メニュー</a></li>
+          <li><a href="about.html" class="footer-nav-link">お店について</a></li>
+          <li><a href="access.html" class="footer-nav-link">営業日・アクセス</a></li>
+          <li><a href="contact.html" class="footer-nav-link">お問い合わせ・予約</a></li>
+        </ul>
+      </nav>
+
+      <!-- 3. Instagram導線とQRの置き場 / 4. 口コミQRの置き場 -->
+      <div class="footer-qr-grid">
+        <div class="qr-card">
+          <div class="qr-card-text">
+            <p class="qr-card-title">Instagram</p>
+            <p class="note-text">日々のお知らせを載せる場所です。<br>デモのため、アカウントへのリンクはありません。</p>
+          </div>
+          <div class="qr-placeholder-box" aria-label="InstagramのQR設置位置（デモ用プレースホルダ）">
+            QR設置位置
+          </div>
+        </div>
+
+        <div class="qr-card">
+          <div class="qr-card-text">
+            <p class="qr-card-title">ご感想はこちら</p>
+            <p class="note-text">レジ横でご案内する口コミQRの設置イメージです。<br>デモのため、口コミの閲覧・投稿はできません。</p>
+          </div>
+          <div class="qr-placeholder-box" aria-label="口コミのQR設置位置（デモ用プレースホルダ）">
+            QR設置位置
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. デモの注記と著作権表記 -->
+      <div class="footer-bottom">
+        <p>当サイトはホームページ制作の実績紹介用に作成された架空店舗のデモサイトです。実在の店舗・団体とは一切関係ありません。</p>
+        <p>© ひより珈琲 — 架空店舗のデモサイト</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- スマホ固定下部バー -->
+  <nav class="mobile-bottom-bar" aria-label="スマホ用クイックメニュー">
+    <a href="contact.html#phone" class="mobile-bottom-link">
+      <span class="mobile-bottom-icon" aria-hidden="true">●</span>
+      <span>電話する</span>
+    </a>
+    <a href="access.html#access" class="mobile-bottom-link">
+      <span class="mobile-bottom-icon" aria-hidden="true">▲</span>
+      <span>地図を見る</span>
+    </a>
+    <a href="menu.html" class="mobile-bottom-link" aria-current="page">
+      <span class="mobile-bottom-icon" aria-hidden="true">■</span>
+      <span>メニュー</span>
+    </a>
+  </nav>
+</body>
+</html>
