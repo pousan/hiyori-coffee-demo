@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cafe.studiomiraie.com/sitemap.xml
